@@ -35,8 +35,8 @@ class TaskController extends GetxController{
   List <Task> _PendingTasks = [];
   List<Task> get pendingTasks => _PendingTasks;
 
-  late User _user;
-  User get user =>_user;
+  late Userr _user;
+  Userr get user =>_user;
 
   SeperateTasks(List<Task> tasks){
     tasks.forEach((task) {
@@ -74,6 +74,7 @@ class TaskController extends GetxController{
        http.Response response = await taskRep.GetAllTasks();
        if(response.statusCode==200){
          _loading = false;
+         update();
          List data = jsonDecode(response.body);
          if(data.length!=0){
            _UserTasks = [];

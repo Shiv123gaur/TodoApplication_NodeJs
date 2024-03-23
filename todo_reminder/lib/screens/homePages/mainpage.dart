@@ -13,7 +13,7 @@ import '../../controllers/mainPageController.dart';
 import 'MainHomePage.dart';
 class MainPage extends StatefulWidget {
   MainPage({super.key,required this.userr});
-  final User userr;
+  final Userr userr;
 
 
   @override
@@ -22,7 +22,7 @@ class MainPage extends StatefulWidget {
 
 
 class _MainPageState extends State<MainPage> {
-  late User? _user;
+  late Userr? _user;
   late List<Widget> pages;
   late PageController pagecontroller;
 

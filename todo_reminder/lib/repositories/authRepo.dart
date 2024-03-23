@@ -60,7 +60,6 @@ class AuthRepo {
     await preferences.setString("name",name );
     await preferences.setString("email", email);
     await preferences.setString("profile-photo", profile_photo);
-    print("Saved User details");
 }
 
 }

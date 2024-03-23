@@ -56,7 +56,7 @@ class TaskTile extends StatelessWidget {
               Column(crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(TitleFiltered,style: GoogleFonts.nunito(fontSize: 16.sp,textStyle: TextStyle(overflow: TextOverflow.ellipsis)),),
-                  Text("${timeLeft(duedate)} | ${formatedtime(duedate)}")
+                  Text("${timeLeft(duedate)} | ${formatedtime(duedate)}",style: GoogleFonts.nunito(fontSize: 8.sp),)
                 ],)
             ],):
             Row(
@@ -66,7 +66,7 @@ class TaskTile extends StatelessWidget {
                 Column(crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(title,style: GoogleFonts.nunito(fontSize: 16.sp),),
-                    Text("${timeLeft(duedate)} | ${formatedtime(duedate)}")
+                    Text("${timeLeft(duedate)} | ${formatedtime(duedate)}",style: GoogleFonts.nunito(fontSize: 8.sp))
                   ],)
               ],
             )

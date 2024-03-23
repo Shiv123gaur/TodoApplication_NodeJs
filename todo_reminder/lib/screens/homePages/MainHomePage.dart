@@ -16,7 +16,7 @@ import 'package:todo_reminder/widgets/Tasktile.dart';
 import '../../controllers/mainPageController.dart';
 
 class MainHomePage extends StatefulWidget {
- final User user;
+ final Userr user;
   const MainHomePage({super.key,required this.user});
   @override
   State<MainHomePage> createState() => _MainHomePageState();
@@ -53,7 +53,8 @@ class _MainHomePageState extends State<MainHomePage> {
                     children: [
                       ClipRRect(
                           borderRadius: BorderRadius.circular(5.w),
-                          child: Image.network(widget.user.profile!,height: 5.h,),),
+                          child: Container(height: 8.h,width: 8.h,
+                              child: Image.network(widget.user.profile!,height: 5.h,)),),
                       SizedBox(
                         width: 2.w,
                       ),
@@ -78,7 +79,9 @@ class _MainHomePageState extends State<MainHomePage> {
                         width: 18.w,
                       ),
                       InkWell(
-                          onTap: () {},
+                          onTap: () {
+
+                          },
                           child: Icon(
                             Icons.notifications,
                             color: Colors.white,

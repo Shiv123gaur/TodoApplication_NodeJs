@@ -75,7 +75,7 @@ class SignInPage extends StatelessWidget {
                   if(ans){
                     await authcontroller.LoginUser(Emailcontroller.text,Passwordcontroller.text);
                     if(authcontroller.userloggedIn){
-                      User user = authcontroller.user;
+                      Userr user = authcontroller.user;
                       Get.to(()=>MainPage(userr: user,));
                     }else{
                       Get.snackbar(authcontroller.message, "try again",duration: Duration(seconds: 3),snackPosition: SnackPosition.BOTTOM,backgroundColor: Colors.blue,colorText: Colors.white);

@@ -22,7 +22,7 @@ class SplashScreen extends StatelessWidget {
     SharedPreferences preferences = Get.find<SharedPreferences>();
     Future.delayed(Duration(seconds: 6),()async{
      if(preferences.containsKey("isloggedin")){
-       User user = User(email: preferences.getString("email"), name: preferences.getString("name"), profile: preferences.getString("profile-photo"));
+       Userr user = Userr(email: preferences.getString("email"), name: preferences.getString("name"), profile: preferences.getString("profile-photo"));
        if(preferences.getBool("isloggedin")!){
          TaskController controller = Get.find<TaskController>();
          await controller.GetAllTasks();

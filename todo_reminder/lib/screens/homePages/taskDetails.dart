@@ -33,7 +33,14 @@ class _TaskDetailPageState extends State<TaskDetailPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors().mainColor,
-      body: SafeArea(
+      body: Container(decoration: BoxDecoration(gradient: LinearGradient(
+          begin: Alignment.bottomCenter,
+          end: Alignment.topCenter,
+          colors: [
+            AppColors().mainColor,
+            Colors.blue
+          ]
+      ),),child: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 2.5.w,vertical: 2.5.w),
@@ -122,7 +129,7 @@ class _TaskDetailPageState extends State<TaskDetailPage> {
             },),
           ),
         ),
-      ),
+      ),),
     );
   }
 }
